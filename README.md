@@ -10,6 +10,7 @@
 
 Common utils for every single day tasks.
 
+# Utils Functions
 ## getType(value: any): string
 
 This function returns the value type, but this function is not just a typeof wrapper, because actually can determinate a more detailed data type. The data type is always a string starting with capital letter.
@@ -48,6 +49,36 @@ utils.isEqual(['foo', { foo: 'bar' }, 1, 'a'], ['foo', { foo: 'bar' }, 1, 'a']) 
 utils.isEqual(['foo', { foo: 'bar' }, 1, 'a'], ['foo', { foo: 'baz' }, 1, 'a'])  // false
 utils.isEqual(true, 1)  // false
 utils.isEqual({ foo: 'bar' }, {})  // false
+```
+
+---
+
+# String Function 
+## camelCase(value: string): string
+
+```javascript
+utils.camelCase('someValue')  // someValue
+utils.camelCase('some value')  // someValue
+utils.camelCase('some  value')  // someValue
+utils.camelCase('SOME VALUE')  // someValue
+```
+
+## kebabCase(value: string): string
+
+```javascript
+utils.kebabCase('someValue')  // some-value
+utils.kebabCase('some value')  // some-value
+utils.kebabCase('some  value')  // some-value
+utils.kebabCase('SOME VALUE')  // some-value
+```
+
+## snakeCase(value: string): string 
+
+```javascript
+utils.snakeCase('someValue')  // some_value
+utils.snakeCase('some value')  // some_value
+utils.snakeCase('some  value')  // some_value
+utils.snakeCase('SOME VALUE')  // some_value
 ```
 
 ## License
